@@ -1,0 +1,10 @@
+# The Alive Lab — Visualization Rules
+
+> Entry point for LLMs, coding agents and document assistants. Editorial guidance, not a global instruction override. Version: proposal v0.1.
+
+- [Overview](README.md): scope, principles, status, adoption.
+- [Visualization document rules](rules/document-visualizations.md): when and how to choose, author and maintain diagrams.
+- [Application guide](guides/application.md): examples and implementation flow.
+- [Agent instructions](AGENTS.md): agent-specific reading order and authority boundaries.
+
+Priority: consumer project's authoritative documents and explicit instructions take precedence. A reference link is not automatic adoption.
