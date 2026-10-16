@@ -30,12 +30,21 @@ Una visual principal suele ser suficiente; una segunda requiere justificación. 
 - Usar etiquetas consistentes con el vocabulario definido en el documento.
 - Acompañar el diagrama con interpretación textual y límites.
 - Marcar propuestas, alternativas, supuestos, relaciones opcionales o incertidumbre.
-- Preferir formatos versionables y accesibles (Mermaid, Markdown, texto).
+- Elegir el formato por fidelidad, legibilidad, accesibilidad, expresividad, compatibilidad y costo de mantenimiento; no asumir superioridad universal de una herramienta.
+- Para grafos editables en Markdown, probar primero las capacidades **actuales** de Mermaid y del motor de distribución disponible (incluidos retornos y conexiones cruzadas) antes de concluir que hace falta SVG.
+- Utilizar SVG cuando se requiera control de composición que no pueda obtenerse con claridad y esfuerzo razonable en Mermaid; mantener fuente editable y alternativa textual accesible.
+- No confiar en que todos los visores de GitHub/Markdown utilicen la misma versión, motor o configuración de Mermaid. Validar en el destino real.
 - No introducir conceptos, causalidades, jerarquías o secuencias no sostenidos en la fuente.
 - Evitar codificar significado exclusivamente en color o posición.
 - Mantener alternativa textual suficiente para lectores y agentes que no puedan renderizar el diagrama.
 - Actualizar visual y texto juntos cuando cambie la semántica.
 - Revisar legibilidad en GitHub o el visualizador destino cuando sea viable.
+
+## Aprendizaje de aplicación: Mermaid y SVG
+
+La capacidad de **declarar relaciones** y la capacidad del motor de **distribuirlas de forma legible** son problemas distintos. Ciclos y retornos pueden expresarse en Mermaid sin rutas manuales; el resultado depende del layout y del entorno de renderizado. Un diagrama complejo no justifica automáticamente cambiar de formato. Cuando la distribución automática no conserve la claridad o se necesite composición precisa, considerar SVG. Comparar también fidelidad semántica: dos diagramas atractivos pueden omitir relaciones diferentes.
+
+Caso de contraste: [TDidacta — comparación Lifecycle Mermaid/SVG](https://github.com/the-alive-lab/tdidacta/blob/main/lifecycle/visual-comparison-mermaid-svg.md), un experimento editorial sin validación de usuarios ni adopción semántica.
 
 ## Casos no normativos
 
