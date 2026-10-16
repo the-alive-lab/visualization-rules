@@ -40,6 +40,21 @@ Una visual principal suele ser suficiente; una segunda requiere justificación. 
 - Actualizar visual y texto juntos cuando cambie la semántica.
 - Revisar legibilidad en GitHub o el visualizador destino cuando sea viable.
 
+## Heurística: texto legible dentro de diagramas Mermaid
+
+Cuando los nombres de nodos o relaciones dificulten leer el diagrama en su visor real, **optimizar primero las etiquetas sin alterar su significado**:
+
+1. **Dividir etiquetas de nodos en unidades semánticas breves.** En diagramas Mermaid que admitan etiquetas con HTML, usar saltos explícitos como `<br/>` dentro de etiquetas entre comillas; por ejemplo, `A["Intención<br/>pedagógica"]`. Preferir cortes entre palabras o sintagmas, no dentro de términos.
+2. **Mantener los nombres completos cuando sean necesarios.** Un salto de línea reorganiza texto; no autoriza abreviar conceptos hasta volverlos ambiguos ni cambiar su vocabulario canónico.
+3. **Reducir la longitud visual, no necesariamente la cantidad de texto.** Equilibrar el ancho y la altura de los nodos; evitar tanto cajas desmesuradamente anchas como columnas de palabras sueltas. Dos líneas son una opción práctica frecuente, no una restricción.
+4. **Redactar las etiquetas de las conexiones como frases cortas y explícitas.** Mantener verbos o modalidades que aclaren el vínculo; por ejemplo, `-->|"puede informar"|`. Si una etiqueta sigue siendo demasiado larga, trasladar su detalle a la explicación textual sin cambiar la interpretación.
+5. **Evaluar el conjunto renderizado**, no cada etiqueta aislada: comprobar si las flechas, nombres y saltos se distinguen a tamaño de lectura habitual, si el grafo exige desplazamiento horizontal y si controles o márgenes tapan información.
+6. **Comprobar compatibilidad antes de aplicar HTML en masa.** La interpretación de `<br/>`, comillas, Markdown strings y configuración de seguridad puede variar según versión o visor de Mermaid. Probar en el destino (por ejemplo, GitHub); si no funciona, usar otra sintaxis soportada o simplificar el diseño.
+
+**No equiparar tamaño de caja con importancia semántica.** El ajuste de línea es una decisión de presentación; preservar una lectura textual accesible fuera del diagrama.
+
+Esta heurística es una pauta editorial opcional. No exige insertar `<br/>` en todos los nodos ni establece un máximo universal de palabras o caracteres.
+
 ## Heurística: relaciones posibles sin cadena obligatoria
 
 Cuando una visualización reúna **conceptos distintos** que pueden relacionarse sin depender necesariamente unos de otros:
