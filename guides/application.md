@@ -28,6 +28,29 @@ Al comparar Mermaid y SVG, evaluar por separado (a) fidelidad a conceptos y rela
 
 Ejemplo abierto: [Lifecycle de TDidacta, Mermaid vs. SVG](https://github.com/the-alive-lab/tdidacta/blob/main/lifecycle/visual-comparison-mermaid-svg.md). Su objetivo es comparar alternativas, no imponer una tecnología.
 
+## Ejemplo: cortes de línea y etiquetas compactas en Mermaid
+
+La etiqueta `Intención pedagógica` puede ocupar una sola línea y ensanchar el nodo. En un `flowchart`, cuando el visor lo admite, el corte `<br/>` permite conservar el término completo distribuyéndolo en dos líneas.
+
+```mermaid
+flowchart LR
+    I["Intención<br/>pedagógica"]
+    F["Fuente<br/>pedagógica"]
+    R["Realización<br/>pedagógica"]
+    E["Experiencia de<br/>aprendizaje"]
+
+    I -->|"puede orientar"| F
+    I -.->|"puede orientar"| R
+    F -->|"puede informar"| R
+    R -->|"puede facilitar"| E
+```
+
+**Qué se optimiza:** ancho de los nodos, agrupación de palabras relacionadas y legibilidad de etiquetas de conexiones. La semántica reside en las palabras y las relaciones, no en el lugar donde se parte la línea. Elegir el punto de corte según el texto y el tamaño real; no partir mecánicamente cada dos palabras.
+
+**Prueba de aceptación:** abrir el Markdown en el visor de destino, comprobar que los `<br/>` producen saltos reales, que ninguna etiqueta se corta u oculta y que el texto puede entenderse sin zoom excesivo. Si el visor no admite ese formato, modificar la sintaxis o el diseño sin dar por válida la previsualización de otro entorno.
+
+Ejemplo aplicado y revisado visualmente en GitHub: [TDidacta — inventario de conceptos candidatos](https://github.com/the-alive-lab/tdidacta/blob/main/foundations/concept-candidates.md). La revisión visual de ese ejemplo no garantiza el mismo resultado en otros visores.
+
 ## Ejemplo: relaciones posibles sin necesidad causal
 
 En [el inventario de conceptos candidatos de TDidacta](https://github.com/the-alive-lab/tdidacta/blob/main/foundations/concept-candidates.md), un grafo editable distingue intención, fuente, realización, experiencia y evidencia. Etiquetas modales («puede orientar», «puede informar», «puede facilitar», «puede producir») evitan presentar los vínculos como garantías. La relación directa entre intención y realización evita sugerir que toda realización necesita una fuente documental intermedia.
