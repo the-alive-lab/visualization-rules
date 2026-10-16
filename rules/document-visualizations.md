@@ -40,6 +40,23 @@ Una visual principal suele ser suficiente; una segunda requiere justificación. 
 - Actualizar visual y texto juntos cuando cambie la semántica.
 - Revisar legibilidad en GitHub o el visualizador destino cuando sea viable.
 
+## Heurística: relaciones posibles sin cadena obligatoria
+
+Cuando una visualización reúna **conceptos distintos** que pueden relacionarse sin depender necesariamente unos de otros:
+
+1. Identificar cada concepto con el vocabulario de la fuente; no sustituir distinciones por una única etapa del proceso.
+2. Examinar cada flecha por separado: su **dirección, verbo y modalidad** deben estar respaldados por el texto. Preferir etiquetas como «puede informar», «puede orientar» o «puede producir» cuando la relación sea contingente; no emplear «produce», «requiere» o «garantiza» sin fundamento.
+3. Incluir rutas alternativas relevantes si omitirlas induciría una dependencia falsa (por ejemplo, representar también una conexión directa cuando la ruta intermedia no es necesaria). No intentar dibujar todas las posibilidades.
+4. Usar diferencias de trazo solo como **ayudas visuales explicadas**, no como semántica universal. Una línea discontinua no significa por sí sola «opcional»: la etiqueta y el texto deben aclararlo; una línea continua tampoco convierte una relación posible en obligatoria.
+5. Acompañar el gráfico con una **lectura textual equivalente** y límites explícitos: ausencia de secuencia obligatoria, ausencia de garantía de resultados y excepciones pertinentes.
+6. Comprobar el resultado en el visor de destino; si el layout oculta etiquetas, cruza enlaces o parece imponer un orden que el contenido niega, revisar representación, disposición o formato.
+
+**Criterio de revisión:** alguien que lea solo las etiquetas y luego la explicación debe poder distinguir qué relaciones son posibles, qué conceptos no se identifican entre sí y qué conclusiones **no** autoriza el diagrama.
+
+Esta heurística complementa las reglas de composición y calidad; **no exige usar Mermaid, flechas discontinuas ni diagramas para todos los conceptos**.
+
+Caso de aplicación editorial: [TDidacta — fuente, realización y aprendizaje](https://github.com/the-alive-lab/tdidacta/blob/main/foundations/concept-candidates.md). El caso ilustra la heurística; no prueba aprendizaje, ni transforma los conceptos candidatos de TDidacta en definiciones adoptadas.
+
 ## Aprendizaje de aplicación: Mermaid y SVG
 
 La capacidad de **declarar relaciones** y la capacidad del motor de **distribuirlas de forma legible** son problemas distintos. Ciclos y retornos pueden expresarse en Mermaid sin rutas manuales; el resultado depende del layout y del entorno de renderizado. Un diagrama complejo no justifica automáticamente cambiar de formato. Cuando la distribución automática no conserve la claridad o se necesite composición precisa, considerar SVG. Comparar también fidelidad semántica: dos diagramas atractivos pueden omitir relaciones diferentes.
