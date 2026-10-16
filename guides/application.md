@@ -28,6 +28,14 @@ Al comparar Mermaid y SVG, evaluar por separado (a) fidelidad a conceptos y rela
 
 Ejemplo abierto: [Lifecycle de TDidacta, Mermaid vs. SVG](https://github.com/the-alive-lab/tdidacta/blob/main/lifecycle/visual-comparison-mermaid-svg.md). Su objetivo es comparar alternativas, no imponer una tecnología.
 
+## Ejemplo: relaciones posibles sin necesidad causal
+
+En [el inventario de conceptos candidatos de TDidacta](https://github.com/the-alive-lab/tdidacta/blob/main/foundations/concept-candidates.md), un grafo editable distingue intención, fuente, realización, experiencia y evidencia. Etiquetas modales («puede orientar», «puede informar», «puede facilitar», «puede producir») evitan presentar los vínculos como garantías. La relación directa entre intención y realización evita sugerir que toda realización necesita una fuente documental intermedia.
+
+El ejemplo acompaña el diagrama con «Cómo leerlo», una lectura textual equivalente y límites. La forma gráfica ayuda a ver relaciones; **su dirección espacial no establece un protocolo obligatorio**. Los trazos discontinuos refuerzan algunas posibilidades, pero no reemplazan el significado de las etiquetas ni del texto.
+
+**Comprobación editorial:** contrastar nodos y flechas con la fuente, detectar dependencias falsamente implicadas, verificar legibilidad de etiquetas en GitHub y mantener la interpretación incluso sin renderizado. Una captura visualmente satisfactoria es revisión de legibilidad, no evidencia de eficacia pedagógica ni prueba general de accesibilidad.
+
 ## Adopción local
 
 Recomendamos enlazar a este repositorio desde el README o AGENTS.md del proyecto consumidor, indicar versión y diferenciar **referencia** de **adopción**. No copiar fragmentos silenciosamente ni hacer que un agente los trate como política superior a la autoridad local.
